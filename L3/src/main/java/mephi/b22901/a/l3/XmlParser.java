@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package mephi.b22901.a.l3;
 
-/**
- *
- * @author Andrey
- */
+package mephi.b22901.a.l3;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -44,7 +36,7 @@ public class XmlParser implements MonsterParser {
     public List<Monster> handle(File file) {
         try {
             XmlMapper xmlMapper = new XmlMapper();
-            xmlMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE); // 👈 добавлено
+            xmlMapper.setPropertyNamingStrategy(PropertyNamingStrategies.SNAKE_CASE); 
 
             List<Monster> monsters = xmlMapper.readValue(
                 file,
